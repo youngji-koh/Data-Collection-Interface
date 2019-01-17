@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Art Collection</title>
+
+
+        <STYLE type="text/css">
+            #wrapBody {width:912px;}
+            #naviMain {margin:20px 50px;}
+
+            a {text-decoration:none;
+
+                padding:10px 20px;
+
+                color:#333;
+
+                font-family:Times;}
+
+            a:hover, a:active {color:#c30;
+
+                text-decoration:none;
+
+                font-family:Times;}
+        </STYLE>
+
+    </head>
+
+
+    <body>
+       <center>
+
+
+            <div id="wrapBody">
+            <div id="naviMain">
+
+                <A href="javascript:void(0);" onclick="show_layer('img1')">A Starry Night</A>
+                <A href="javascript:void(0);" onclick="show_layer('img2')">Magpie</A>
+                <A href="javascript:void(0);" onclick="show_layer('img3')">House of Hyensook</A>
+                <A href="javascript:void(0);" onclick="show_layer('img4')">Flower and Bird</A>
+
+
+            </div>
+            </div>
+
+
+            <div id="img1" style="position:absolute; top:70px; left:20px; visibility:hidden">
+                <!-- Upload the image -->
+                <IMG src="Images/A_starry_night.jpg" height=500px OnClick = "javascript:showCoords(event)" name="A starry night"></IMG>
+            </div>
+
+            <div id="img2" style="position:absolute; top:70px; left:20px; visibility:hidden">
+                <!-- Upload the image -->
+                <IMG src="Images/Magpie.jpg" height=500px OnClick = "javascript:showCoords(event)" name="Magpie" visibility="hidden">
+                </IMG>
+            </div>
+
+           <div id="img3" style="position:absolute; top:70px; left:20px; visibility:hidden">
+               <!-- Upload the image -->
+               <IMG src="Images/House.jpg" height=500px OnClick = "javascript:showCoords(event)" name="House" visibility="hidden">
+               </IMG>
+           </div>
+
+           <div id="img4" style="position:absolute; top:70px; left:20px; visibility:hidden">
+               <!-- Upload the image -->
+               <IMG src="Images/Flower_and_bird.jpg" height=500px OnClick = "javascript:showCoords(event)" name="Flower and bird" visibility="hidden">
+               </IMG>
+           </div>
+
+
+        </center>
+
+
+        <p id="demo" style="position:relative; top:560px; left:20px"></p>
+        <script type="text/javascript">
+            function show_layer(id)
+            {
+                var img = ['img1','img2','img3','img4'];
+
+                for(var i=0; i < img.length; i++){
+
+                    if(img[i] != id)
+                        document.getElementById(img[i]).style.visibility="hidden";
+                }
+
+                document.getElementById(id).style.visibility="visible";
+
+            }
+
+
+            <!-- Get the location of mouse -->
+            function showCoords(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var coords = "X coords: " + (x-20) + ", Y coords: " + (y-70);
+                document.getElementById("demo").innerHTML = coords;
+            }
+
+        </script>
+
+    </body>
+
+</html>
