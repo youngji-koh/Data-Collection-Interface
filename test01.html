@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <title>Art Collection</title>
 
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 
         <STYLE type="text/css">
             #wrapBody {width:912px;}
@@ -18,13 +20,7 @@
 
                 font-family:Times;}
 
-            a:hover, a:active {color:#c30;
-
-                text-decoration:none;
-
-                font-family:Times;}
         </STYLE>
-
     </head>
 
 
@@ -47,7 +43,9 @@
 
             <div id="img1" style="position:absolute; top:70px; left:20px; visibility:hidden">
                 <!-- Upload the image -->
-                <IMG src="Images/A_starry_night.jpg" height=500px OnClick = "javascript:showCoords(event)" name="A starry night"></IMG>
+                <IMG src="Images/A_starry_night.jpg" height=300px width=454px OnClick = "javascript:showCoords(event)" name="A starry night"></IMG>
+
+
             </div>
 
             <div id="img2" style="position:absolute; top:70px; left:20px; visibility:hidden">
@@ -74,6 +72,7 @@
 
         <p id="demo" style="position:relative; top:560px; left:20px"></p>
         <script type="text/javascript">
+
             function show_layer(id)
             {
                 var img = ['img1','img2','img3','img4'];
@@ -84,9 +83,12 @@
                         document.getElementById(img[i]).style.visibility="hidden";
                 }
 
+
                 document.getElementById(id).style.visibility="visible";
 
             }
+
+
 
 
             <!-- Get the location of mouse -->
@@ -96,6 +98,9 @@
                 var coords = "X coords: " + (x-20) + ", Y coords: " + (y-70);
                 document.getElementById("demo").innerHTML = coords;
             }
+
+
+
 
         </script>
 
