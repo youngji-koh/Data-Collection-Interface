@@ -21,6 +21,8 @@ window.onload = function(){
 
     function getMousePos(event) {
 
+        rsm_btn.disabled = 'disabled';
+
         var rect = canvas.getBoundingClientRect();
 
         var x = (event.clientX - rect.left) / (rect.right - rect.left) * width;
@@ -28,6 +30,9 @@ window.onload = function(){
 
         x = x.toFixed(0);
         y = y.toFixed(0);
+
+        x = parseInt(x);
+        y = parseInt(y);
 
         ctx.arc(x, y, radius, 0, Math.PI*2, true);
         ctx.closePath();
@@ -74,11 +79,6 @@ window.onload = function(){
 
     }
 
-    function dist(x1,y1,x2,y2) {
-        x2-=x1; y2-=y1;
-        return Math.sqrt((x2*x2) + (y2*y2));
-    }
-
     // When click the mouse, create event
     canvas.addEventListener("click", getMousePos, false);
 
@@ -88,7 +88,7 @@ window.onload = function(){
 
         // stop collecting data
         canvas.removeEventListener("click", getMousePos, false);
-
+        rsm_btn.disabled = false;
         var temp_obj = new Object();
 
         // input the coordinate value of the polygon
@@ -97,7 +97,7 @@ window.onload = function(){
         // input the category name
         var menu = document.getElementById("menu");
         temp_obj.category = menu.options[menu.selectedIndex].text;
-
+        temp_obj.object_description = "object description";
 
         // complete a dictionary about polygon info.(segmentation, category)
         temp_annotations.push(temp_obj);
@@ -138,13 +138,11 @@ window.onload = function(){
 
     }, false);
 
-    // back to previous point
-    var bck_btn = document.getElementById("back");
-    bck_btn.addEventListener("click", function() {
+    // undo collecting data
+    var undo_btn = document.getElementById("undo");
+    undo_btn.addEventListener("click", function() {
 
             var newx, newy;
-            var temp, length;
-            var x1,y1,x2,y2;
             // remove the last drawn point from the drawing array
 
             var new_point = coord.pop();
@@ -169,24 +167,6 @@ window.onload = function(){
             // erase the previous point
             ctx.clearRect(newx - radius, newy - radius, radius*2, radius*2);
 
-            x1 = prex; y1 = prey;
-            x2 = newx; y2 = newy;
-
-            if (x2 < x1) {
-                tmp = x1; x1 = x2; x2 = tmp;
-                tmp = y1; y1 = y2; y2 = tmp;
-            }
-
-            length = dist(x1,y1,x2,y2);
-
-            //ctx.translate(x1,y1);
-            //ctx.rotate(Math.atan2(y2-y1,x2-x1));
-            //ctx.fillRect(0,0,3, length);
-            //ctx.fillStyle  = "red";
-            // erase the line
-            //ctx.clearRect(0,0, 3, length);
-
-
             // restart collecting data
             canvas.addEventListener("click", getMousePos, false);
 
@@ -201,9 +181,18 @@ window.onload = function(){
         // create JSON file and write the coordination value.
         $(document).ready(function(){
             var obj = new Object();
-            obj.file_name = "A starry night";
+            obj.file_name = "A_starry_night.jpg";
+            obj.title = "A Starry Night";
+            obj.id = 1;
             obj.height = "300";
-            obj.width = "454"
+            obj.width = "454";
+            obj.artist = "Vincent van Gogh";
+            obj.year = 1889;
+            obj.medium = "Oil on canvas";
+            obj.dimensions = "73.7 cm × 92.1 cm (29 in x 36 1⁄4 in)";
+            obj.locations = "Museum of Modern Art, New York City";
+            obj.description = "The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Regarded as among Van Gogh's finest works, The Starry Night is one of the most recognized paintings in the history of Western culture.";
+
             obj.annotations = temp_annotations;
 
             var images = new Array();

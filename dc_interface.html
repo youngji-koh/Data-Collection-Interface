@@ -8,6 +8,26 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+        <style>
+            #container{
+                width:500px;
+                height:350px;
+                overflow:hidden;
+            }
+            #slide{
+                width:100%;
+                height:100%;
+                transition: transform .3s;
+            }
+            canvas{
+
+                width:auto;
+                height:auto;
+                max-width:100%;
+
+            }
+
+        </style>
 
     </head>
 
@@ -15,19 +35,20 @@
 
         <center>
 
-           <div id="img1">
-               <p style="font-family:fantasy; font-size:xx-large ">A Starry Night</p>
-            <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
 
+            <p style="font-family:fantasy; font-size:xx-large ">A Starry Night</p>
+
+            <div id="container">
+                <div id="slide">
+                    <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
+
+                </div>
             </div>
 
-            <p>
-                coordinate value :
-                <label id="output1"></label>
-            </p>
+
 
             <form name="category" id="form1">
-                <label>Choose category : </label>
+                <label> Choose category : </label>
 
                 <select name="menu" id="menu">
                     <option value="star">star</option>
@@ -36,27 +57,35 @@
                     <option value="tree">tree</option>
                     <option value="house">house</option>
                 </select>
-
             </form>
+
+
+            <p>
+                coordinate value :
+                <label id="output1"></label>
+            </p>
+
+
 
             <p>
                 <button class="btn btn-primary" id="finish">Finish</button>
-                <button class="btn btn-primary" id="back">Back</button>
+                <button class="btn btn-primary" id="undo">Undo</button>
                 <button class="btn btn-primary" id="reset">Reset</button>
                 <button class="btn btn-primary" id="resume">Resume</button>
             </p>
 
             <p></p>
-            <p> Do you finish marking all polygons? </p>
-            then,
-            <button class="btn btn-success" id="submit">Submit!</button>
+            <p> If you finish marking all polygons, </p>
+
+
+            <p><button class="btn btn-success" id="submit">Submit!</button></p>
 
             <!--div id="output"></div-->
 
             <pre id="json_output"></pre>
             <a href="#" id="link" download="image_data.json">download</a>
         </center>
-
+        <script src="canvas_adjustment.js"></script>
         <script src="data_colletct.js"></script>
 
     </body>
