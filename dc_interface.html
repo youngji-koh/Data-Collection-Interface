@@ -27,64 +27,112 @@
 
             }
 
+            .main_common{
+                display:inline-table;
+                float: left;
+                width: 500px;
+                height: 500px;
+            }
+
         </style>
+
+        <script>
+            var coordinates = function(element) {
+                element = $(element);
+                var top = element.position().top;
+                var left = element.position().left;
+
+            }
+
+
+            $('#box').draggable({
+                start: function() {
+                    coordinates('#box');
+                },
+                stop: function() {
+                    coordinates('#box');
+                }
+            });
+
+        </script>
 
     </head>
 
     <body>
 
-        <center>
 
-
-            <p style="font-family:fantasy; font-size:xx-large ">A Starry Night</p>
-
-            <div id="container">
-                <div id="slide">
-                    <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
-
-                </div>
-            </div>
-
-
-
-            <form name="category" id="form1">
-                <label> Choose category : </label>
-
-                <select name="menu" id="menu">
-                    <option value="star">star</option>
-                    <option value="moon">moon</option>
-                    <option value="wind">wind</option>
-                    <option value="tree">tree</option>
-                    <option value="house">house</option>
-                </select>
-            </form>
-
-
-            <p>
-                coordinate value :
-                <label id="output1"></label>
+        <div class="main_common">
+            <center>
+                <p style="font-family:fantasy; font-size:xx-large">
+                    How to use!
+                </p>
+            </center>
+            <p style="font-family:Times New Roman;">
+                Step 1. Mark points on a picture according to the object <br><br>
+                Step 2. Choose the category<br><br>
+                Step 3. Click the "Finish" button when you finished marking one polygon<br><br>
+                Step 4. If you mark an wrong point, you can "Undo" or "Reset" the points<br><br>
+                Step 5. If you want to start other objects, click "Resume" button<br><br>
+                Step 6. If you finish marking all polygons, click "Submit" button<br><br>
             </p>
 
+        </div>
 
 
-            <p>
-                <button class="btn btn-primary" id="finish">Finish</button>
-                <button class="btn btn-primary" id="undo">Undo</button>
-                <button class="btn btn-primary" id="reset">Reset</button>
-                <button class="btn btn-primary" id="resume">Resume</button>
-            </p>
-
-            <p></p>
-            <p> If you finish marking all polygons, </p>
+        <div class="main_common">
+            <center>
 
 
-            <p><button class="btn btn-success" id="submit">Submit!</button></p>
+                <p style="font-family:fantasy; font-size:xx-large ">A Starry Night</p>
 
-            <!--div id="output"></div-->
+                    <div id="container">
+                        <div id="slide">
+                                <div id="box">
+                                <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
+                                </div>
+                        </div>
+                    </div>
 
-            <pre id="json_output"></pre>
-            <a href="#" id="link" download="image_data.json">download</a>
-        </center>
+                <p>
+                    coordinate value :
+                    <label id="output1"></label>
+                </p>
+
+
+                <form name="category" id="form1">
+                    <label> Choose category : </label>
+
+                    <select name="menu" id="menu">
+                        <option value="star">star</option>
+                        <option value="moon">moon</option>
+                        <option value="wind">wind</option>
+                        <option value="tree">tree</option>
+                        <option value="house">house</option>
+                    </select>
+
+                    <input type="text" id="description">
+                </form>
+
+                <p>
+                    <button class="btn btn-primary" id="finish">Finish</button>
+                    <button class="btn btn-primary" id="undo">Undo</button>
+                    <button class="btn btn-primary" id="reset">Reset</button>
+                    <button class="btn btn-primary" id="resume">Resume</button>
+                </p>
+
+                <p></p>
+                <p> If you finish marking all polygons, </p>
+
+
+                <p><button class="btn btn-success" id="submit">Submit!</button></p>
+
+                <!--div id="output"></div-->
+
+                <!--pre id="json_output"></pre-->
+                <a href="#" id="link" download="image_data.json">download</a>
+            </center>
+        </div>
+
         <script src="canvas_adjustment.js"></script>
         <script src="data_colletct.js"></script>
 

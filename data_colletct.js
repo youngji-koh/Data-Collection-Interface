@@ -34,6 +34,7 @@ window.onload = function(){
         x = parseInt(x);
         y = parseInt(y);
 
+        ctx.beginPath();
         ctx.arc(x, y, radius, 0, Math.PI*2, true);
         ctx.closePath();
         ctx.fillStyle = "rgb(255,255,0)";
@@ -66,18 +67,6 @@ window.onload = function(){
 
     }
 
-    function drawLine(x,y){
-
-        ctx.beginPath();
-        ctx.moveTo(prex,prey);
-        ctx.lineTo(x,y);
-        ctx.lineWidth = 3;
-        // line color
-        ctx.strokeStyle = "yellow";
-        ctx.stroke();
-        ctx.closePath();
-
-    }
 
     // When click the mouse, create event
     canvas.addEventListener("click", getMousePos, false);
@@ -97,7 +86,10 @@ window.onload = function(){
         // input the category name
         var menu = document.getElementById("menu");
         temp_obj.category = menu.options[menu.selectedIndex].text;
-        temp_obj.object_description = "object description";
+
+        // input the category description
+        var desc = $("#description").val() ;
+        temp_obj.object_description = desc;
 
         // complete a dictionary about polygon info.(segmentation, category)
         temp_annotations.push(temp_obj);
@@ -134,7 +126,7 @@ window.onload = function(){
         temp_annotations = [];
 
         // restart collecting data
-        canvas.addEventListener("click", getMousePos, false);
+        //canvas.addEventListener("click", getMousePos, false);
 
     }, false);
 
@@ -142,33 +134,44 @@ window.onload = function(){
     var undo_btn = document.getElementById("undo");
     undo_btn.addEventListener("click", function() {
 
-            var newx, newy;
-            // remove the last drawn point from the drawing array
+            //remove the last point
+            coord.pop();
 
-            var new_point = coord.pop();
-            var pre_point = coord.pop();
-            coord.push(pre_point);
+            var index = 0;
+            prex = null; prey = null;
 
+            // erase all lines
+            ctx.clearRect(0, 0, width, height);
 
-            if(new_point){
-                newx = new_point[0];
-                newy = new_point[1];
+            // redraw
+            while(index < coord.length){
+                var x,y;
+                x = coord[index][0];
+                y = coord[index][1];
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI*2, true);
+                ctx.closePath();
+                ctx.fillStyle = "rgb(255,255,0)";
+                ctx.fill();
+
+                // If there are right coordinate values, draw the line
+                if(prex != null && prey != null)
+                {
+                    ctx.beginPath();
+                    ctx.moveTo(prex,prey);
+                    ctx.lineTo(x,y);
+                    ctx.lineWidth = 3;
+                    // line color
+                    ctx.strokeStyle = "yellow";
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+                prex= x; prey= y;
+                index++;
             }
-
-            if(pre_point){
-                prex = pre_point[0];
-                prey = pre_point[1];
-            }else{
-
-                prex = null;
-                prey = null;
-            }
-
-            // erase the previous point
-            ctx.clearRect(newx - radius, newy - radius, radius*2, radius*2);
-
             // restart collecting data
-            canvas.addEventListener("click", getMousePos, false);
+            //canvas.addEventListener("click", getMousePos, false);
 
 
     }, false);
