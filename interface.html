@@ -19,6 +19,8 @@
                 height:100%;
                 transition: transform .3s;
             }
+
+
             canvas{
 
                 width:auto;
@@ -36,30 +38,10 @@
 
         </style>
 
-        <script>
-            var coordinates = function(element) {
-                element = $(element);
-                var top = element.position().top;
-                var left = element.position().left;
-
-            }
-
-
-            $('#box').draggable({
-                start: function() {
-                    coordinates('#box');
-                },
-                stop: function() {
-                    coordinates('#box');
-                }
-            });
-
-        </script>
-
     </head>
 
-    <body>
 
+    <body>
 
         <div class="main_common">
             <center>
@@ -68,15 +50,18 @@
                 </p>
             </center>
             <p style="font-family:Times New Roman;">
-                Step 1. Mark points on a picture according to the object <br><br>
-                Step 2. Choose the category<br><br>
-                Step 3. Click the "Finish" button when you finished marking one polygon<br><br>
-                Step 4. If you mark an wrong point, you can "Undo" or "Reset" the points<br><br>
-                Step 5. If you want to start other objects, click "Resume" button<br><br>
-                Step 6. If you finish marking all polygons, click "Submit" button<br><br>
+                Step 1. Choose the category<br><br>
+                Step 2.  Mark points on a picture according to the outline of the object<br><br>
+                Step 3. Fill in the blank with thd object's description<br><br>
+                Step 4. Click the "Finish" button when you finished marking one polygon<br><br>
+                Step 5. If you mark an wrong point, you can "Undo" or "Reset" the points<br><br>
+                Step 6. If you want to start other objects, click "Resume" button<br><br>
+                Step 7. If you finish marking all polygons, click "Submit" button<br><br>
             </p>
 
         </div>
+
+
 
 
         <div class="main_common">
@@ -87,17 +72,16 @@
 
                     <div id="container">
                         <div id="slide">
-                                <div id="box">
-                                <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
-                                </div>
+
+                            <canvas id="mycanvas" width="454" height="300" style="background:url('./Images/A_starry_night.jpg')"></canvas>
+
                         </div>
                     </div>
 
-                <p>
+                <!--p>
                     coordinate value :
                     <label id="output1"></label>
-                </p>
-
+                </p-->
 
                 <form name="category" id="form1">
                     <label> Choose category : </label>
@@ -113,6 +97,7 @@
                     <input type="text" id="description">
                 </form>
 
+                <br>
                 <p>
                     <button class="btn btn-primary" id="finish">Finish</button>
                     <button class="btn btn-primary" id="undo">Undo</button>
