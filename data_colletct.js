@@ -88,8 +88,16 @@ window.onload = function(){
         temp_obj.category = menu.options[menu.selectedIndex].text;
 
         // input the category description
+        /*
         var desc = $("#description").val();
         temp_obj.object_description = desc;
+        */
+
+        var color = $("#color").val();
+        temp_obj.object_color = color;
+
+        var position = $("#position").val();
+        temp_obj.object_position = position;
 
         // complete a dictionary about polygon info.(segmentation, category)
         temp_annotations.push(temp_obj);
