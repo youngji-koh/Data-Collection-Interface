@@ -62,7 +62,7 @@ window.onload = function(){
         // input the X,Y value
         coord.push(temp);
 
-        document.getElementById("output1").innerHTML = temp;
+        //document.getElementById("output1").innerHTML = temp;
         //document.getElementById("output").innerHTML = coord;
 
     }
@@ -85,13 +85,21 @@ window.onload = function(){
 
         // input the category name
         var menu = document.getElementById("menu");
-        temp_obj.category = menu.options[menu.selectedIndex].text;
+
+        var object = menu.options[menu.selectedIndex].text;
+
+        // when user wants to choose other categories
+        if(object == "other"){
+            var other = $("#other").val();
+            temp_obj.category = other;
+        }
+        else{
+            temp_obj.category = menu.options[menu.selectedIndex].text;
+        }
 
         // input the category description
-        /*
         var desc = $("#description").val();
         temp_obj.object_description = desc;
-        */
 
         var color = $("#color").val();
         temp_obj.object_color = color;
