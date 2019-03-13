@@ -20,6 +20,8 @@ window.onload = function(){
 
     // this variable for displaying the segmentation
     var disp_coord = new Array();
+    var num_point = new Array();
+    var obnum = 0;
 
     function getMousePos(event) {
 
@@ -85,6 +87,7 @@ window.onload = function(){
 
         // input the coordinate value of the polygon
         temp_obj.segmentation = coord;
+        num_point[obnum++] = coord.length;
 
         // input the category name
         var menu = document.getElementById("menu");
@@ -159,10 +162,14 @@ window.onload = function(){
             disp_coord.pop();
 
             var index = 0;
+            var temp_obnum = 0;
+            var tnp = 0;
             prex = null; prey = null;
 
             // erase all lines
             ctx.clearRect(0, 0, width, height);
+
+            tnp = num_point[temp_obnum];
 
             // redraw
             while(index < disp_coord.length){
@@ -176,12 +183,29 @@ window.onload = function(){
                 ctx.fillStyle = "rgb(255,255,0)";
                 ctx.fill();
 
+                if(tnp == 0){
+                    tnp = num_point[++temp_obnum];
+                }
+
+                // debugging test
+                console.log(num_point[temp_obnum]);
+
                 // If there are right coordinate values, draw the line
                 if(prex != null && prey != null)
                 {
+                    //console.log(tnp);
+                    tnp -= 1;
+
                     ctx.beginPath();
-                    ctx.moveTo(prex,prey);
-                    ctx.lineTo(x,y);
+
+                    if(tnp == 0){
+
+                    }
+                    else{
+                        ctx.moveTo(prex,prey);
+                        ctx.lineTo(x,y);
+                    }
+
                     ctx.lineWidth = 3;
                     // line color
                     ctx.strokeStyle = "yellow";
