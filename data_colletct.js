@@ -18,6 +18,8 @@ window.onload = function(){
     var prex = null, prey = null;
     var radius = 5;
 
+    // this variable for displaying the segmentation
+    var disp_coord = new Array();
 
     function getMousePos(event) {
 
@@ -61,6 +63,7 @@ window.onload = function(){
 
         // input the X,Y value
         coord.push(temp);
+        disp_coord.push(temp);
 
         //document.getElementById("output1").innerHTML = temp;
         //document.getElementById("output").innerHTML = coord;
@@ -139,6 +142,7 @@ window.onload = function(){
         prex = null;
         prey = null;
         coord = [];
+        disp_coord = [];
         temp_annotations = [];
 
         // restart collecting data
@@ -152,6 +156,7 @@ window.onload = function(){
 
             //remove the last point
             coord.pop();
+            disp_coord.pop();
 
             var index = 0;
             prex = null; prey = null;
@@ -160,10 +165,10 @@ window.onload = function(){
             ctx.clearRect(0, 0, width, height);
 
             // redraw
-            while(index < coord.length){
+            while(index < disp_coord.length){
                 var x,y;
-                x = coord[index][0];
-                y = coord[index][1];
+                x = disp_coord[index][0];
+                y = disp_coord[index][1];
 
                 ctx.beginPath();
                 ctx.arc(x, y, radius, 0, Math.PI*2, true);
