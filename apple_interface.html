@@ -10,8 +10,8 @@
 
         <style>
             #container{
-                width:600px;
-                height:475px;
+                width:659px;
+                height:530px;
                 overflow:hidden;
             }
             #slide{
@@ -40,7 +40,7 @@
             .main_common{
                 display:inline-table;
                 float: left;
-                width: 600px;
+                width: 700px;
                 height: 600px;
             }
 
@@ -76,31 +76,32 @@
             <center>
 
 
-                <p style="font-family:fantasy; font-size:xx-large ">The Starry Night</p>
+                <p style="font-family:fantasy; font-size:xx-large ">The Basket of Apples</p>
 
-                    <div id="container">
-                        <div id="slide">
+                <div id="container">
+                    <div id="slide">
 
-                            <canvas id="mycanvas" width="600" height="475" style="background:url('./Images/The_starry_night.jpg')"></canvas>
+                        <canvas id="mycanvas" width="659" height="530" style="background:url('./Images/Apple.jpg')"></canvas>
 
-                        </div>
                     </div>
+                </div>
 
                 <!--p>
-                    coordinate value :
-                    <label id="output1"></label>
-                </p-->
+coordinate value :
+<label id="output1"></label>
+</p-->
 
                 <br>
                 <form name="category" id="form1">
                     <label> Choose category : </label>
 
                     <select name="menu" id="menu">
-                        <option value="star">star</option>
-                        <option value="moon">moon</option>
-                        <option value="wind">wind</option>
-                        <option value="tree">tree</option>
-                        <option value="town">town</option>
+                        <option value="apple">apple</option>
+                        <option value="bottle">bottle</option>
+                        <option value="bread">bread</option>
+                        <option value="basket">basket</option>
+                        <option value="cloth">cloth</option>
+                        <option value="book">book</option>
                         <option value="other">other</option>
                     </select>
 
@@ -142,7 +143,7 @@
         </div>
 
         <script src="canvas_adjustment.js"></script>
-        <script src="data_colletct.js"></script>
+        <script src="apple_dc.js"></script>
 
     </body>
 </html>

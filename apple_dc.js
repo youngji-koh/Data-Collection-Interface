@@ -157,66 +157,66 @@ window.onload = function(){
     var undo_btn = document.getElementById("undo");
     undo_btn.addEventListener("click", function() {
 
-            //remove the last point
-            coord.pop();
-            disp_coord.pop();
+        //remove the last point
+        coord.pop();
+        disp_coord.pop();
 
-            var index = 0;
-            var temp_obnum = 0;
-            var tnp = 0;
-            prex = null; prey = null;
+        var index = 0;
+        var temp_obnum = 0;
+        var tnp = 0;
+        prex = null; prey = null;
 
-            // erase all lines
-            ctx.clearRect(0, 0, width, height);
+        // erase all lines
+        ctx.clearRect(0, 0, width, height);
 
-            tnp = num_point[temp_obnum];
+        tnp = num_point[temp_obnum];
 
-            // redraw
-            while(index < disp_coord.length){
-                var x,y;
-                x = disp_coord[index][0];
-                y = disp_coord[index][1];
+        // redraw
+        while(index < disp_coord.length){
+            var x,y;
+            x = disp_coord[index][0];
+            y = disp_coord[index][1];
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fillStyle = "rgb(255,255,0)";
+            ctx.fill();
+
+            if(tnp == 0){
+                tnp = num_point[++temp_obnum];
+            }
+
+            // debugging test
+            console.log(num_point[temp_obnum]);
+
+            // If there are right coordinate values, draw the line
+            if(prex != null && prey != null)
+            {
+                //console.log(tnp);
+                tnp -= 1;
 
                 ctx.beginPath();
-                ctx.arc(x, y, radius, 0, Math.PI*2, true);
-                ctx.closePath();
-                ctx.fillStyle = "rgb(255,255,0)";
-                ctx.fill();
 
                 if(tnp == 0){
-                    tnp = num_point[++temp_obnum];
+
+                }
+                else{
+                    ctx.moveTo(prex,prey);
+                    ctx.lineTo(x,y);
                 }
 
-                // debugging test
-                console.log(num_point[temp_obnum]);
-
-                // If there are right coordinate values, draw the line
-                if(prex != null && prey != null)
-                {
-                    //console.log(tnp);
-                    tnp -= 1;
-
-                    ctx.beginPath();
-
-                    if(tnp == 0){
-
-                    }
-                    else{
-                        ctx.moveTo(prex,prey);
-                        ctx.lineTo(x,y);
-                    }
-
-                    ctx.lineWidth = 3;
-                    // line color
-                    ctx.strokeStyle = "yellow";
-                    ctx.stroke();
-                    ctx.closePath();
-                }
-                prex= x; prey= y;
-                index++;
+                ctx.lineWidth = 3;
+                // line color
+                ctx.strokeStyle = "yellow";
+                ctx.stroke();
+                ctx.closePath();
             }
-            // restart collecting data
-            //canvas.addEventListener("click", getMousePos, false);
+            prex= x; prey= y;
+            index++;
+        }
+        // restart collecting data
+        //canvas.addEventListener("click", getMousePos, false);
 
 
     }, false);
@@ -229,18 +229,17 @@ window.onload = function(){
         // create JSON file and write the coordination value.
         $(document).ready(function(){
             var obj = new Object();
-            obj.file_name = "The_starry_night.jpg";
-            obj.title = "The Starry Night";
-            obj.id = 1;
-            obj.height = "300";
-            obj.width = "454";
-            obj.artist = "Vincent van Gogh";
-            obj.year = 1889;
+            obj.file_name = "Apple.jpg";
+            obj.title = "The Basket of Apples";
+            obj.id = 4;
+            obj.height = "530";
+            obj.width = "659";
+            obj.artist = "Paul Cézanne";
+            obj.year = 1895;
             obj.medium = "Oil on canvas";
-            obj.dimensions = "73.7 cm × 92.1 cm (29 in x 36 1⁄4 in)";
-            obj.locations = "Museum of Modern Art, New York City";
-            obj.description = "The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Regarded as among Van Gogh's finest works, The Starry Night is one of the most recognized paintings in the history of Western culture.";
-
+            obj.dimensions = "65 cm × 80 cm (25.6 in × 31.5 in)";
+            obj.locations = "Art Institute of Chicago, Chicago";
+            obj.description = "The Basket of Apples is a still life oil painting by French artist Paul Cézanne. It belongs to the Helen Birch Bartlett Memorial Collection of the Art Institute of Chicago. The piece is often noted for its disjointed perspective. It has been described as a balanced composition due to its unbalanced parts the tilted bottle, the incline of the basket, and the foreshortened lines of the cookies mesh with the lines of the tablecloth. Additionally, the right side of the tabletop is not in the same plane as the left side, as if the image simultaneously reflects two viewpoints. Paintings such as this helped form a bridge between Impressionism and Cubism.";
             obj.annotations = temp_annotations;
 
             var images = new Array();
@@ -263,3 +262,4 @@ window.onload = function(){
 
 
 }
+

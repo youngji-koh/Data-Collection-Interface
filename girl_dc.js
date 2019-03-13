@@ -157,66 +157,66 @@ window.onload = function(){
     var undo_btn = document.getElementById("undo");
     undo_btn.addEventListener("click", function() {
 
-            //remove the last point
-            coord.pop();
-            disp_coord.pop();
+        //remove the last point
+        coord.pop();
+        disp_coord.pop();
 
-            var index = 0;
-            var temp_obnum = 0;
-            var tnp = 0;
-            prex = null; prey = null;
+        var index = 0;
+        var temp_obnum = 0;
+        var tnp = 0;
+        prex = null; prey = null;
 
-            // erase all lines
-            ctx.clearRect(0, 0, width, height);
+        // erase all lines
+        ctx.clearRect(0, 0, width, height);
 
-            tnp = num_point[temp_obnum];
+        tnp = num_point[temp_obnum];
 
-            // redraw
-            while(index < disp_coord.length){
-                var x,y;
-                x = disp_coord[index][0];
-                y = disp_coord[index][1];
+        // redraw
+        while(index < disp_coord.length){
+            var x,y;
+            x = disp_coord[index][0];
+            y = disp_coord[index][1];
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fillStyle = "rgb(255,255,0)";
+            ctx.fill();
+
+            if(tnp == 0){
+                tnp = num_point[++temp_obnum];
+            }
+
+            // debugging test
+            console.log(num_point[temp_obnum]);
+
+            // If there are right coordinate values, draw the line
+            if(prex != null && prey != null)
+            {
+                //console.log(tnp);
+                tnp -= 1;
 
                 ctx.beginPath();
-                ctx.arc(x, y, radius, 0, Math.PI*2, true);
-                ctx.closePath();
-                ctx.fillStyle = "rgb(255,255,0)";
-                ctx.fill();
 
                 if(tnp == 0){
-                    tnp = num_point[++temp_obnum];
+
+                }
+                else{
+                    ctx.moveTo(prex,prey);
+                    ctx.lineTo(x,y);
                 }
 
-                // debugging test
-                console.log(num_point[temp_obnum]);
-
-                // If there are right coordinate values, draw the line
-                if(prex != null && prey != null)
-                {
-                    //console.log(tnp);
-                    tnp -= 1;
-
-                    ctx.beginPath();
-
-                    if(tnp == 0){
-
-                    }
-                    else{
-                        ctx.moveTo(prex,prey);
-                        ctx.lineTo(x,y);
-                    }
-
-                    ctx.lineWidth = 3;
-                    // line color
-                    ctx.strokeStyle = "yellow";
-                    ctx.stroke();
-                    ctx.closePath();
-                }
-                prex= x; prey= y;
-                index++;
+                ctx.lineWidth = 3;
+                // line color
+                ctx.strokeStyle = "yellow";
+                ctx.stroke();
+                ctx.closePath();
             }
-            // restart collecting data
-            //canvas.addEventListener("click", getMousePos, false);
+            prex= x; prey= y;
+            index++;
+        }
+        // restart collecting data
+        //canvas.addEventListener("click", getMousePos, false);
 
 
     }, false);
@@ -229,17 +229,17 @@ window.onload = function(){
         // create JSON file and write the coordination value.
         $(document).ready(function(){
             var obj = new Object();
-            obj.file_name = "The_starry_night.jpg";
-            obj.title = "The Starry Night";
-            obj.id = 1;
-            obj.height = "300";
-            obj.width = "454";
-            obj.artist = "Vincent van Gogh";
-            obj.year = 1889;
+            obj.file_name = "Girl.jpg";
+            obj.title = "Girl with a Pearl Earring";
+            obj.id = 3;
+            obj.height = "527";
+            obj.width = "450";
+            obj.artist = "Johannes Vermeer";
+            obj.year = 1665;
             obj.medium = "Oil on canvas";
-            obj.dimensions = "73.7 cm × 92.1 cm (29 in x 36 1⁄4 in)";
-            obj.locations = "Museum of Modern Art, New York City";
-            obj.description = "The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Regarded as among Van Gogh's finest works, The Starry Night is one of the most recognized paintings in the history of Western culture.";
+            obj.dimensions = "44.5 cm × 39 cm (17.5 in × 15 in)";
+            obj.locations = "Mauritshuis, The Hague, Netherlands";
+            obj.description = "Girl with a Pearl Earring is an oil painting by Dutch Golden Age painter Johannes Vermeer, dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 20th century after the large pearl earring worn by the girl portrayed there. The work has been in the collection of the Mauritshuis in The Hague since 1902 and has been the subject of various literary treatments. In 2006, the Dutch public selected it as the most beautiful painting in the Netherlands.";
 
             obj.annotations = temp_annotations;
 

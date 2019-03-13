@@ -10,8 +10,8 @@
 
         <style>
             #container{
-                width:600px;
-                height:475px;
+                width:473px;
+                height:479px;
                 overflow:hidden;
             }
             #slide{
@@ -76,31 +76,28 @@
             <center>
 
 
-                <p style="font-family:fantasy; font-size:xx-large ">The Starry Night</p>
+                <p style="font-family:fantasy; font-size:xx-large ">Composition with Red Blue and Yellow</p>
 
-                    <div id="container">
-                        <div id="slide">
+                <div id="container">
+                    <div id="slide">
 
-                            <canvas id="mycanvas" width="600" height="475" style="background:url('./Images/The_starry_night.jpg')"></canvas>
+                        <canvas id="mycanvas" width="473" height="479" style="background:url('./Images/Mondrian.png')"></canvas>
 
-                        </div>
                     </div>
+                </div>
 
                 <!--p>
-                    coordinate value :
-                    <label id="output1"></label>
-                </p-->
+coordinate value :
+<label id="output1"></label>
+</p-->
 
                 <br>
                 <form name="category" id="form1">
                     <label> Choose category : </label>
 
                     <select name="menu" id="menu">
-                        <option value="star">star</option>
-                        <option value="moon">moon</option>
-                        <option value="wind">wind</option>
-                        <option value="tree">tree</option>
-                        <option value="town">town</option>
+                        <option value="line">line</option>
+                        <option value="surface">surface</option>
                         <option value="other">other</option>
                     </select>
 
@@ -142,7 +139,7 @@
         </div>
 
         <script src="canvas_adjustment.js"></script>
-        <script src="data_colletct.js"></script>
+        <script src="mondrian_dc.js"></script>
 
     </body>
 </html>

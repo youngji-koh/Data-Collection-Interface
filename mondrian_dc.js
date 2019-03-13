@@ -157,66 +157,66 @@ window.onload = function(){
     var undo_btn = document.getElementById("undo");
     undo_btn.addEventListener("click", function() {
 
-            //remove the last point
-            coord.pop();
-            disp_coord.pop();
+        //remove the last point
+        coord.pop();
+        disp_coord.pop();
 
-            var index = 0;
-            var temp_obnum = 0;
-            var tnp = 0;
-            prex = null; prey = null;
+        var index = 0;
+        var temp_obnum = 0;
+        var tnp = 0;
+        prex = null; prey = null;
 
-            // erase all lines
-            ctx.clearRect(0, 0, width, height);
+        // erase all lines
+        ctx.clearRect(0, 0, width, height);
 
-            tnp = num_point[temp_obnum];
+        tnp = num_point[temp_obnum];
 
-            // redraw
-            while(index < disp_coord.length){
-                var x,y;
-                x = disp_coord[index][0];
-                y = disp_coord[index][1];
+        // redraw
+        while(index < disp_coord.length){
+            var x,y;
+            x = disp_coord[index][0];
+            y = disp_coord[index][1];
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fillStyle = "rgb(255,255,0)";
+            ctx.fill();
+
+            if(tnp == 0){
+                tnp = num_point[++temp_obnum];
+            }
+
+            // debugging test
+            console.log(num_point[temp_obnum]);
+
+            // If there are right coordinate values, draw the line
+            if(prex != null && prey != null)
+            {
+                //console.log(tnp);
+                tnp -= 1;
 
                 ctx.beginPath();
-                ctx.arc(x, y, radius, 0, Math.PI*2, true);
-                ctx.closePath();
-                ctx.fillStyle = "rgb(255,255,0)";
-                ctx.fill();
 
                 if(tnp == 0){
-                    tnp = num_point[++temp_obnum];
+
+                }
+                else{
+                    ctx.moveTo(prex,prey);
+                    ctx.lineTo(x,y);
                 }
 
-                // debugging test
-                console.log(num_point[temp_obnum]);
-
-                // If there are right coordinate values, draw the line
-                if(prex != null && prey != null)
-                {
-                    //console.log(tnp);
-                    tnp -= 1;
-
-                    ctx.beginPath();
-
-                    if(tnp == 0){
-
-                    }
-                    else{
-                        ctx.moveTo(prex,prey);
-                        ctx.lineTo(x,y);
-                    }
-
-                    ctx.lineWidth = 3;
-                    // line color
-                    ctx.strokeStyle = "yellow";
-                    ctx.stroke();
-                    ctx.closePath();
-                }
-                prex= x; prey= y;
-                index++;
+                ctx.lineWidth = 3;
+                // line color
+                ctx.strokeStyle = "yellow";
+                ctx.stroke();
+                ctx.closePath();
             }
-            // restart collecting data
-            //canvas.addEventListener("click", getMousePos, false);
+            prex= x; prey= y;
+            index++;
+        }
+        // restart collecting data
+        //canvas.addEventListener("click", getMousePos, false);
 
 
     }, false);
@@ -229,17 +229,17 @@ window.onload = function(){
         // create JSON file and write the coordination value.
         $(document).ready(function(){
             var obj = new Object();
-            obj.file_name = "The_starry_night.jpg";
-            obj.title = "The Starry Night";
-            obj.id = 1;
-            obj.height = "300";
-            obj.width = "454";
-            obj.artist = "Vincent van Gogh";
-            obj.year = 1889;
-            obj.medium = "Oil on canvas";
-            obj.dimensions = "73.7 cm × 92.1 cm (29 in x 36 1⁄4 in)";
-            obj.locations = "Museum of Modern Art, New York City";
-            obj.description = "The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Regarded as among Van Gogh's finest works, The Starry Night is one of the most recognized paintings in the history of Western culture.";
+            obj.file_name = "Mondrian.jpg";
+            obj.title = "Composition with Red Blue and Yellow";
+            obj.id = 2;
+            obj.height = "479";
+            obj.width = "473";
+            obj.artist = "Piet Mondrian";
+            obj.year = 1930;
+            obj.medium = "Oil and paper on canvas";
+            obj.dimensions = "59,5 cm × 59,5 cm (23.4 in × 23.4 in)";
+            obj.locations = "National Museum, Belgrade, Serbia";
+            obj.description = "Composition with Red Blue and Yellow is a 1930 painting by Piet Mondrian. A well-known work of, Mondrian contributes to the abstract visual language in a large way despite using a relatively small canvas. Thick, black brushwork defines the borders of the different geometric figures. Comparably, the black brushwork on the canvas is minimal but it is masterfully applied to become one of the defining features of the work.";
 
             obj.annotations = temp_annotations;
 
