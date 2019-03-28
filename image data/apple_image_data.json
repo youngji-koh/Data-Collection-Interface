@@ -120,10 +120,10 @@
 							151
 						]
 					],
-					"category": "apple",
-					"object_description": "바구니에 들어있는 사과들",
-					"object_color": "초록, 빨강",
-					"object_position": "왼쪽 중간"
+                    "category": "several apples",
+					"object_description": "apples in a basket",
+					"object_color": "green, red",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -236,10 +236,10 @@
 							244
 						]
 					],
-					"category": "apple",
-					"object_description": "식탁 위에 있는 사과들",
-					"object_color": "초록, 빨강",
-					"object_position": "오른쪽 중간"
+                    "category": "several apples",
+					"object_description": "apples on the table",
+					"object_color": "green, red",
+					"object_position": "the middle right"
 				},
 				{
 					"segmentation": [
@@ -277,9 +277,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "빨강",
-					"object_position": "왼쪽 중간"
+					"object_description": "an apple on the table",
+					"object_color": "red",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -313,9 +313,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "빨강",
-					"object_position": "왼쪽 중간"
+					"object_description": "an apple on the table",
+					"object_color": "red",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -349,9 +349,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "빨강",
-					"object_position": "중간"
+					"object_description": "an apple on the table",
+					"object_color": "red",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -381,9 +381,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "초록",
-					"object_position": "중간"
+                    "object_description": "an apple on the table",
+					"object_color": "green",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -409,9 +409,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "초록",
-					"object_position": "중간"
+                    "object_description": "an apple on the table",
+					"object_color": "green",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -445,9 +445,9 @@
 						]
 					],
 					"category": "apple",
-					"object_description": "식탁 위에 있는 사과",
-					"object_color": "빨강",
-					"object_position": "오른쪽 중간"
+                    "object_description": "an apple on the table",
+					"object_color": "red",
+					"object_position": "the middle right"
 				},
 				{
 					"segmentation": [
@@ -509,9 +509,9 @@
 						]
 					],
 					"category": "bottle",
-					"object_description": "유리병",
-					"object_color": "어두운 초록색",
-					"object_position": "중간 위"
+					"object_description": "a glass bottle",
+					"object_color": "dark green",
+					"object_position": "the middle upper"
 				},
 				{
 					"segmentation": [
@@ -569,9 +569,9 @@
 						]
 					],
 					"category": "bread",
-					"object_description": "길쭉한 빵",
-					"object_color": "황토색",
-					"object_position": "중간 위"
+					"object_description": "long-shaped bread",
+					"object_color": "reddish brown",
+					"object_position": "the middle upper"
 				},
 				{
 					"segmentation": [
@@ -677,9 +677,9 @@
 						]
 					],
 					"category": "basket",
-					"object_description": "옆으로 기울어진 바구니",
-					"object_color": "갈색",
-					"object_position": "왼쪽 위"
+                    "object_description": "a side-slope basket",
+					"object_color": "brown",
+					"object_position": "the left upper"
 				},
 				{
 					"segmentation": [
@@ -801,9 +801,9 @@
 						]
 					],
 					"category": "cloth",
-					"object_description": "식탁 위에 펼쳐진 천",
-					"object_color": "흰색 ",
-					"object_position": "중간"
+                    "object_description": "cloth spread over the table",
+					"object_color": "white",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -845,9 +845,9 @@
 						]
 					],
 					"category": "book",
-					"object_description": "바구니 아래 있는 책",
-					"object_color": "어두운 갈색",
-					"object_position": "왼쪽 중간"
+                    "object_description": "a book under a basket",
+					"object_color": "dark brown",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -893,9 +893,9 @@
 						]
 					],
 					"category": "plate",
-					"object_description": "빵이 담긴 접시",
-					"object_color": "흰색 ",
-					"object_position": "오른쪽 중간"
+                    "object_description": "a plate of bread",
+					"object_color": "white",
+					"object_position": "the middle right"
 				},
 				{
 					"segmentation": [
@@ -949,9 +949,9 @@
 						]
 					],
 					"category": "table",
-					"object_description": "사물들이 올려진 책상",
-					"object_color": "갈색",
-					"object_position": "아래"
+                    "object_description": "a desk with objects on it",
+					"object_color": "brown",
+					"object_position": "the bottom"
 				}
 			]
 		}

@@ -2,16 +2,16 @@
 	"images": [
 		{
 			"file_name": "Girl.jpg",
-			"title": "진주 귀고리를 한 소녀",
+            "title": "Girl with a Pearl Earring",
 			"id": 3,
 			"height": "527",
 			"width": "450",
-            "artist": "요하네스 페르메이르",
+            "artist": "	Johannes Vermeer",
 			"year": 1665,
-			"medium": "캔버스에 유화",
+            "medium": "	Oil on canvas",
 			"dimensions": "44.5 cm × 39 cm (17.5 in × 15 in)",
-            "locations": "헤이그 마우리츠호이스",
-            "description": "《진주 귀고리를 한 소녀》는 네덜란드 화가 요하네스 페르메이르의 걸작으로, 이름에서 암시하듯이 소녀가 걸고 있는 진주 귀고리를 그림의 초점으로 사용하였다. 헤이그의 마우리츠호이스에 전시되어 있으며, 북유럽의 《모나리자, 또는 네덜란드의 《모나리자》라고도 불린다. 페르메이르 특유의 미묘한 빛의 표현, 단순하지만 조화로운 구성, 선명한 색채가 특징이다. 빛의 효과를 사용하여 두 번 이상의 붓터치로 그려진 진주는 왼쪽 윗부분이 밝게 빛나고 있으며, 아랫 부분은 하얀 옷깃을 반사하여 부드럽게 비추면서 맑고 투명한 느낌을 준다. 그림에서 머리에 터번을 두른 진주 귀고리의 소녀는 누군가를 보기 위해서 왼쪽 어깨를 틀어 고개를 돌리고 있다. 큰 눈동자와 관능적인 입술, 특유의 시선과 표정이 보는 사람에게 비밀스러움이 어우러진 신비감을 주고 있다.",
+            "locations": "Mauritshuis, The Hague, Netherlands",
+            "description": "Girl with a Pearl Earring is an oil painting by Dutch Golden Age painter Johannes Vermeer, dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 20th century after the large pearl earring worn by the girl portrayed there. The work has been in the collection of the Mauritshuis in The Hague since 1902 and has been the subject of various literary treatments. In 2006, the Dutch public selected it as the most beautiful painting in the Netherlands.",
 			"annotations": [
 				{
 					"segmentation": [
@@ -149,9 +149,9 @@
 						]
 					],
 					"category": "face",
-					"object_description": "얼굴 전체",
-					"object_color": "살구색",
-					"object_position": "중간"
+					"object_description": "the whole face",
+					"object_color": "flesh tint",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -181,9 +181,9 @@
 						]
 					],
 					"category": "eye",
-					"object_description": "오른쪽 눈",
-					"object_color": "회색",
-					"object_position": "중간 위"
+					"object_description": "right eye",
+					"object_color": "gray",
+					"object_position": "the middle upper"
 				},
 				{
 					"segmentation": [
@@ -213,9 +213,9 @@
 						]
 					],
 					"category": "eye",
-					"object_description": "왼쪽 눈",
-					"object_color": "회색",
-					"object_position": "중간 위"
+					"object_description": "left eye",
+					"object_color": "gray",
+					"object_position": "the middle upper"
 				},
 				{
 					"segmentation": [
@@ -265,9 +265,9 @@
 						]
 					],
 					"category": "nose",
-					"object_description": "코의 측면",
-					"object_color": "살구색",
-					"object_position": "중간"
+					"object_description": "side of the nose",
+					"object_color": "flesh tint",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -305,9 +305,9 @@
 						]
 					],
 					"category": "mouth",
-					"object_description": "조금 벌려진 입",
-					"object_color": "빨강",
-					"object_position": "중간 아래"
+                    "object_description": "a slightly open mouth",
+					"object_color": "red",
+					"object_position": "the middle bottom"
 				},
 				{
 					"segmentation": [
@@ -337,9 +337,9 @@
 						]
 					],
 					"category": "earring",
-					"object_description": "진주귀걸이",
-					"object_color": "은색",
-					"object_position": "중간"
+					"object_description": "pearl earing",
+					"object_color": "silver",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -561,9 +561,9 @@
 						]
 					],
 					"category": "turban",
-					"object_description": "머리를 감싸고 있는 터번",
-					"object_color": "푸른색, 노란색",
-					"object_position": "중간 위"
+                    "object_description": "a turban wrapped around her head",
+					"object_color": "blue, yellow",
+					"object_position": "the middle upper"
 				},
 				{
 					"segmentation": [
@@ -601,9 +601,9 @@
 						]
 					],
 					"category": "ear",
-					"object_description": "터번에 가려진 귀",
-					"object_color": "살구색 ",
-					"object_position": "중간"
+                    "object_description": "the ear covered by turban",
+					"object_color": "flesh tint",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -677,9 +677,9 @@
 						]
 					],
 					"category": "neck",
-					"object_description": "옆으로 돌린 목",
-					"object_color": "살구색 ",
-					"object_position": "중간"
+                    "object_description": "a lateral neck",
+					"object_color": "flesh tint",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -785,9 +785,9 @@
 						]
 					],
 					"category": "clothes",
-					"object_description": "여자가 입고 있는 옷",
-					"object_color": "노란색, 흰색",
-					"object_position": "중간 아래"
+                    "object_description": "a woman's dress",
+					"object_color": "yellow, white",
+					"object_position": "the middle bottom"
 				}
 			]
 		}

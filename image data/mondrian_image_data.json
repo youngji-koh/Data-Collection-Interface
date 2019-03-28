@@ -33,9 +33,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "깨끗함",
-					"object_color": "하양",
-					"object_position": "왼쪽 위"
+					"object_description": "clean",
+					"object_color": "white",
+					"object_position": "the upper left"
 				},
 				{
 					"segmentation": [
@@ -57,9 +57,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "깨끗함",
-					"object_color": "하양",
-					"object_position": "왼쪽 중간"
+					"object_description": "clean",
+					"object_color": "white",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -81,9 +81,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "깨끗함",
-					"object_color": "하양",
-					"object_position": "중간 아래"
+					"object_description": "clean",
+					"object_color": "white",
+					"object_position": "the middle bottom"
 				},
 				{
 					"segmentation": [
@@ -105,9 +105,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "깨끗함",
-					"object_color": "하양",
-					"object_position": "오른쪽 아래"
+                    "object_description": "clean",
+					"object_color": "white",
+					"object_position": "the bottom right"
 				},
 				{
 					"segmentation": [
@@ -129,9 +129,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "열정적",
-					"object_color": "빨강",
-					"object_position": "오른쪽 위"
+                    "object_description": "passionate",
+					"object_color": "red",
+					"object_position": "the upper right"
 				},
 				{
 					"segmentation": [
@@ -149,9 +149,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "차가움",
-					"object_color": "파랑",
-					"object_position": "왼쪽 아래"
+					"object_description": "coldness",
+					"object_color": "blue",
+					"object_position": "the bottom left"
 				},
 				{
 					"segmentation": [
@@ -253,9 +253,9 @@
 						]
 					],
 					"category": "line",
-					"object_description": "딱딱함",
-					"object_color": "검정",
-					"object_position": "중간"
+                    "object_description": "hardness",
+					"object_color": "black",
+					"object_position": "the middle"
 				},
 				{
 					"segmentation": [
@@ -277,9 +277,9 @@
 						]
 					],
 					"category": "surface",
-					"object_description": "부드러움",
-					"object_color": "노랑",
-					"object_position": "오른쪽 아래"
+					"object_description": "softness",
+					"object_color": "yellow",
+					"object_position": "the bottom right"
 				}
 			]
 		}

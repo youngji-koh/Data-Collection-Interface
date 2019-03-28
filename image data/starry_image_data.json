@@ -229,9 +229,9 @@
 						]
 					],
 					"category": "tree",
-					"object_description": "사이프러스 나무",
-					"object_color": "검정",
-					"object_position": "왼쪽"
+					"object_description": "cyprus tree",
+					"object_color": "black",
+					"object_position": "the left"
 				},
 				{
 					"segmentation": [
@@ -281,9 +281,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "왼쪽 중간"
+					"object_description": "warmness",
+					"object_color": "yellow",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -313,9 +313,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "왼쪽 위"
+					"object_description": "warmness",
+					"object_color": "yellow",
+					"object_position": "the upper left"
 				},
 				{
 					"segmentation": [
@@ -353,9 +353,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "나무의 오른쪽"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the left"
 				},
 				{
 					"segmentation": [
@@ -389,9 +389,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "나무의 왼쪽"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the left"
 				},
 				{
 					"segmentation": [
@@ -437,9 +437,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "왼쪽 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the upper left"
 				},
 				{
 					"segmentation": [
@@ -477,9 +477,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "왼쪽 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",,
+					"object_position": "the upper left"
 				},
 				{
 					"segmentation": [
@@ -509,9 +509,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "중간 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the upper middle"
 				},
 				{
 					"segmentation": [
@@ -541,9 +541,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "중간 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the upper middle"
 				},
 				{
 					"segmentation": [
@@ -577,9 +577,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "오른쪽 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the upper right"
 				},
 				{
 					"segmentation": [
@@ -613,9 +613,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "오른쪽 위"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the upper right"
 				},
 				{
 					"segmentation": [
@@ -645,9 +645,9 @@
 						]
 					],
 					"category": "star",
-					"object_description": "따뜻함",
-					"object_color": "노랑",
-					"object_position": "왼쪽 끝의 중간"
+                    "object_description": "warmness",
+                    "object_color": "yellow",
+					"object_position": "the middle left"
 				},
 				{
 					"segmentation": [
@@ -697,9 +697,9 @@
 						]
 					],
 					"category": "moon",
-					"object_description": "빛남",
-					"object_color": "노랑",
-					"object_position": "오른쪽 맨 위"
+					"object_description": "shining",
+					"object_color": "yellow",
+					"object_position": "the top right"
 				},
 				{
 					"segmentation": [
@@ -881,10 +881,274 @@
 						]
 					],
 					"category": "wind",
-					"object_description": "바람이 분다",
-					"object_color": "파랑",
-					"object_position": "중간"
+					"object_description": "the wind blows",
+					"object_color": "blue",
+					"object_position": "the middle"
 				},
+                {
+                    "segmentation": [
+                        [
+                            1,
+                            274
+                        ],
+                        [
+                            4,
+                            329
+                        ],
+                        [
+                            32,
+                            340
+                        ],
+                        [
+                            42,
+                            346
+                        ],
+                        [
+                            81,
+                            341
+                        ],
+                        [
+                            89,
+                            342
+                        ],
+                        [
+                            212,
+                            339
+                        ],
+                        [
+                            248,
+                            322
+                        ],
+                        [
+                            272,
+                            324
+                        ],
+                        [
+                            292,
+                            327
+                        ],
+                        [
+                            300,
+                            328
+                        ],
+                        [
+                            331,
+                            310
+                        ],
+                        [
+                            381,
+                            294
+                        ],
+                        [
+                            416,
+                            286
+                        ],
+                        [
+                            458,
+                            290
+                        ],
+                        [
+                            484,
+                            285
+                        ],
+                        [
+                            515,
+                            274
+                        ],
+                        [
+                            537,
+                            254
+                        ],
+                        [
+                            556,
+                            231
+                        ],
+                        [
+                            593,
+                            225
+                        ],
+                        [
+                            597,
+                            169
+                        ],
+                        [
+                            504,
+                            202
+                        ],
+                        [
+                            448,
+                            257
+                        ],
+                        [
+                            392,
+                            262
+                        ],
+                        [
+                            346,
+                            278
+                        ],
+                        [
+                            311,
+                            278
+                        ],
+                        [
+                            264,
+                            278
+                        ],
+                        [
+                            224,
+                            289
+                        ],
+                        [
+                            186,
+                            297
+                        ],
+                        [
+                            168,
+                            297
+                        ],
+                        [
+                            66,
+                            291
+                        ],
+                        [
+                            51,
+                            274
+                        ],
+                        [
+                            26,
+                            273
+                        ],
+                        [
+                            14,
+                            277
+                        ]
+                    ],
+                    "category": "wind",
+                    "object_description": "the wind blows",
+                    "object_color": "white",
+                    "object_position": "under the middle"
+                },
+                {
+                    "segmentation": [
+                        [
+                            2,
+                            423
+                        ],
+                        [
+                            38,
+                            424
+                        ],
+                        [
+                            40,
+                            414
+                        ],
+                        [
+                            67,
+                            414
+                        ],
+                        [
+                            272,
+                            367
+                        ],
+                        [
+                            332,
+                            358
+                        ],
+                        [
+                            417,
+                            350
+                        ],
+                        [
+                            460,
+                            345
+                        ],
+                        [
+                            516,
+                            342
+                        ],
+                        [
+                            585,
+                            334
+                        ],
+                        [
+                            596,
+                            296
+                        ],
+                        [
+                            592,
+                            242
+                        ],
+                        [
+                            560,
+                            241
+                        ],
+                        [
+                            545,
+                            260
+                        ],
+                        [
+                            533,
+                            281
+                        ],
+                        [
+                            470,
+                            294
+                        ],
+                        [
+                            428,
+                            295
+                        ],
+                        [
+                            395,
+                            297
+                        ],
+                        [
+                            352,
+                            312
+                        ],
+                        [
+                            311,
+                            333
+                        ],
+                        [
+                            294,
+                            338
+                        ],
+                        [
+                            278,
+                            329
+                        ],
+                        [
+                            253,
+                            328
+                        ],
+                        [
+                            228,
+                            339
+                        ],
+                        [
+                            212,
+                            348
+                        ],
+                        [
+                            36,
+                            354
+                        ],
+                        [
+                            17,
+                            346
+                        ],
+                        [
+                            3,
+                            406
+                        ]
+                    ],
+                    "category": "mountain",
+                    "object_description": "mountain behind the village",
+                    "object_color": "blue",
+                    "object_position": "under the middle"
+                },
 				{
 					"segmentation": [
 						[
@@ -1009,9 +1273,9 @@
 						]
 					],
 					"category": "town",
-					"object_description": "많은 집들",
-					"object_color": "알록달록한 색깔들",
-					"object_position": "아래"
+					"object_description": "many houses",
+					"object_color": "the variety of colors",
+					"object_position": "the bottom"
 				}
 			]
 		}
