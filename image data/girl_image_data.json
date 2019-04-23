@@ -788,7 +788,167 @@
                     "object_description": "a woman's dress",
 					"object_color": "yellow, white",
 					"object_position": "the middle bottom"
-				}
+				},
+                {
+                    "segmentation": [
+                        [
+                            8,
+                            521
+                        ],
+                        [
+                            134,
+                            526
+                        ],
+                        [
+                            178,
+                            430
+                        ],
+                        [
+                            202,
+                            354
+                        ],
+                        [
+                            212,
+                            336
+                        ],
+                        [
+                            209,
+                            321
+                        ],
+                        [
+                            184,
+                            317
+                        ],
+                        [
+                            165,
+                            310
+                        ],
+                        [
+                            136,
+                            234
+                        ],
+                        [
+                            140,
+                            196
+                        ],
+                        [
+                            148,
+                            159
+                        ],
+                        [
+                            169,
+                            113
+                        ],
+                        [
+                            217,
+                            92
+                        ],
+                        [
+                            236,
+                            81
+                        ],
+                        [
+                            264,
+                            62
+                        ],
+                        [
+                            321,
+                            76
+                        ],
+                        [
+                            342,
+                            102
+                        ],
+                        [
+                            352,
+                            117
+                        ],
+                        [
+                            354,
+                            138
+                        ],
+                        [
+                            365,
+                            186
+                        ],
+                        [
+                            380,
+                            226
+                        ],
+                        [
+                            397,
+                            285
+                        ],
+                        [
+                            417,
+                            367
+                        ],
+                        [
+                            426,
+                            396
+                        ],
+                        [
+                            407,
+                            403
+                        ],
+                        [
+                            389,
+                            407
+                        ],
+                        [
+                            385,
+                            422
+                        ],
+                        [
+                            357,
+                            426
+                        ],
+                        [
+                            387,
+                            520
+                        ],
+                        [
+                            445,
+                            522
+                        ],
+                        [
+                            448,
+                            3
+                        ],
+                        [
+                            1,
+                            2
+                        ]
+                    ],
+                    "category": "background",
+                    "object_description": "background of the picture",
+                    "object_color": "black",
+                    "object_position": "the top"
+                },
+                {
+                    "segmentation": [
+                        [
+                            281,
+                            272
+                        ],
+                        [
+                            289,
+                            295
+                        ],
+                        [
+                            333,
+                            294
+                        ],
+                        [
+                            332,
+                            218
+                        ]
+                    ],
+                    "category": "background",
+                    "object_description": "background of the picture",
+                    "object_color": "black",
+                    "object_position": "the middle"
+                }
 			]
 		}
 	]
